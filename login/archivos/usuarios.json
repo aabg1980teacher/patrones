@@ -1,0 +1,11 @@
+[
+  {
+    "idUsuario": "1",
+    "numeroIntentos": 0,
+    "credenciales" : {
+      "nombreUsuario": "abarrera",
+      "contrasena": "123456"
+    }
+  }
+
+]

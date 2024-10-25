@@ -1,14 +1,20 @@
 package co.edu.javeriana.clean.interfaces.main;
 
-import co.edu.javeriana.clean.funcionalidad.login.ValidadorCredenciales;
+
 import co.edu.javeriana.clean.funcionalidad.servicios.dto.IngresoDTO;
 import co.edu.javeriana.clean.funcionalidad.servicios.dto.RespuestaDTO;
-import co.edu.javeriana.clean.funcionalidad.servicios.gateway.ValidadorGateway;
-import co.edu.javeriana.clean.infraestructura.persistencia.archivos.RepositorioUsuariosJSON;
+
+import co.edu.javeriana.clean.interfaces.main.fachada.FachadaLogin;
 
 import java.util.Scanner;
 
 public class MenuIngreso {
+
+    private FachadaLogin fachadaLogin;
+
+    public MenuIngreso() {
+        fachadaLogin = new FachadaLogin();
+    }
 
     public void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -20,10 +26,9 @@ public class MenuIngreso {
         System.out.print("Por favor ingrese su contraseña: ");
         String contrasena = scanner.nextLine();
 
-        ValidadorCredenciales validadorCredenciales = new ValidadorCredenciales(new RepositorioUsuariosJSON());
-        ValidadorGateway validadorGateway = new ValidadorGateway(validadorCredenciales);
+
         IngresoDTO ingresoDTO = new IngresoDTO(usuario, contrasena);
-        RespuestaDTO<Boolean> respuesta = validadorGateway.validarCredenciales(ingresoDTO);
+        RespuestaDTO<Boolean> respuesta = fachadaLogin.validarCredenciales(ingresoDTO);
 
         System.out.println(respuesta.getMensaje());
 

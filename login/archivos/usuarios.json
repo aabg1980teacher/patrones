@@ -2,9 +2,17 @@
   {
     "idUsuario": "1",
     "numeroIntentos": 0,
-    "credenciales" : {
+    "credenciales": {
       "nombreUsuario": "abarrera",
       "contrasena": "123456"
+    }
+  },
+  {
+    "idUsuario": "2",
+    "numeroIntentos": 0,
+    "credenciales": {
+      "nombreUsuario": "sdiaz",
+      "contrasena": "123"
     }
   }
 

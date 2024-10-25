@@ -14,7 +14,7 @@ import java.util.List;
 
 public class RepositorioUsuariosJSON implements RepositorioUsuarios {
 
-    private final String rutaArchivo = "archivos/usuarios.json";
+    private final String rutaArchivo = "login/archivos/usuarios.json";
 
     private List<Usuario> usuarios;
 

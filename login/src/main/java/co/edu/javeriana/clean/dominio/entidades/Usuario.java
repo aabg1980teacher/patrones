@@ -40,7 +40,6 @@ public class Usuario {
             return false;
         }
         numeroIntentos = 0;
-        //fechaUltimoIngreso = LocalDateTime.now();
         return true;
     }
 }
